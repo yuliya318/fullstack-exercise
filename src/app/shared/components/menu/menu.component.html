@@ -1,0 +1,17 @@
+<nav [ngClass]="{ 'd-flex': menuName != 'Left' }">
+  <p>{{ menuName }} menu:</p>
+  <ul [ngClass]="{ 'd-flex': menuName != 'Left' }" class="p-0">
+    <li class="nav-item ml-2">
+      <a [routerLink]="['/']" class="text-body">Home</a>
+    </li>
+    <li class="nav-item ml-2">
+      <a [routerLink]="['/posts']" class="text-body">Posts</a>
+    </li>
+    <li class="nav-item ml-2">
+      <a [routerLink]="['/gallery']" class="text-body">Gallery</a>
+    </li>
+    <li class="nav-item ml-2">
+      <a [routerLink]="['/contact-us']" class="text-body">Contact us</a>
+    </li>
+  </ul>
+</nav>

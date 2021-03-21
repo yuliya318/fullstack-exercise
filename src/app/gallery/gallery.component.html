@@ -1,0 +1,4 @@
+<p>gallery works!</p>
+<div *ngFor="let photo of photos$ | async">
+    <img [src]="photo.thumbnailUrl">
+</div>
