@@ -57,7 +57,9 @@ export class PostsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.getPostsSubscribtion.unsubscribe();
-    this.createPostSubscribtion.unsubscribe();
+    if (this.createPostSubscribtion) {
+      this.createPostSubscribtion.unsubscribe();
+    }
   }
 
   private getPosts(): void {

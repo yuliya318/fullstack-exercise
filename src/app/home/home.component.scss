@@ -3,3 +3,12 @@
   background: linear-gradient(to bottom, #fc5c7dc9, #6a82fba8);
   border-radius: 7px;
 }
+.glass-block {
+  min-width: 330px;
+}
+
+@media screen and (max-width: 425px) {
+  .glass-block {
+    min-width: 200px;
+  }
+}

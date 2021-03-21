@@ -1,10 +1,10 @@
 <div class="gallery-content container p-2">
-    <h3 class="text-center m-3">Gallery</h3>
-    <div class="d-flex flex-wrap justify-content-around p-3">
-      <fe-photo-card-large
-        class="w-50"
-        *ngFor="let photo of photos$ | async"
-        [photo]="photo"
-      ></fe-photo-card-large>
-    </div>
+  <h3 class="text-center m-3">Gallery</h3>
+  <div class="d-flex flex-wrap justify-content-around p-3">
+    <fe-photo-card-full
+      class="photo-card-full"
+      *ngFor="let photo of photos$ | async"
+      [photo]="photo"
+    ></fe-photo-card-full>
+  </div>
 </div>

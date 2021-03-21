@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GalleryComponent } from './gallery.component';
 import { SharedModule } from '../shared/shared.module';
-import { PhotoCardLargeComponent } from './photo-card-large/photo-card-large.component';
+import { PhotoCardFullComponent } from './photo-card-full/photo-card-full.component';
 
 
 @NgModule({
-  declarations: [GalleryComponent, PhotoCardLargeComponent],
+  declarations: [GalleryComponent, PhotoCardFullComponent],
   imports: [
     CommonModule,
     SharedModule

@@ -1,6 +1,11 @@
-<nav [ngClass]="{ 'd-flex': menuName != 'Left' }">
-  <p>{{ menuName }} menu:</p>
-  <ul [ngClass]="{ 'd-flex': menuName != 'Left' }" class="p-0">
+<nav [ngClass]="{ 'd-flex flex-wrap': menuName != 'Left' }">
+  <p class="m-auto mb-0">{{ menuName }} menu:</p>
+  <ul
+    [ngClass]="{
+      'd-flex flex-wrap justify-content-around': menuName != 'Left'
+    }"
+    class="p-0 mb-0 m-auto"
+  >
     <li class="nav-item ml-2">
       <a [routerLink]="['/']" class="text-body">Home</a>
     </li>

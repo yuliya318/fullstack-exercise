@@ -18,7 +18,7 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getPhotos(30);
+    this.getPhotos(100);
   }
 
 }

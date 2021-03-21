@@ -1,16 +1,16 @@
 <div class="posts-content p-2">
   <div class="row m-3">
-    <h3 class="text-center col-md-8 offset-md-2">Popular posts</h3>
-    <div class="col-md-2">
-      <button class="btn btn-warning" (click)="openModal(postModal)">
+    <h3 class="text-center col-md-6 offset-md-3">Popular posts</h3>
+    <div class="col-md-3">
+      <button class="btn btn-warning d-block ml-auto" (click)="openModal(postModal)">
         Create post
       </button>
     </div>
   </div>
-  <div class="row p-4" *ngFor="let post of posts; index as i">
-    <fe-post-item [post]="post" class="col-9"></fe-post-item>
-    <div class="col-3">
-      <div class="d-flex justify-content-around">
+  <div class="p-4" *ngFor="let post of posts; index as i">
+    <fe-post-item [post]="post" ></fe-post-item>
+    <div class="post-buttons">
+      <div class="d-flex justify-content-end">
         <button
           class="btn btn-primary mr-2"
           (click)="openModal(postModal); changeEditStatus(post, i)"
