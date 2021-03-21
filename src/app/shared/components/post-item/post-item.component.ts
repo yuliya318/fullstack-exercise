@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Post } from 'src/app/shared/models/post.model';
 
 @Component({
@@ -6,14 +6,9 @@ import { Post } from 'src/app/shared/models/post.model';
   templateUrl: './post-item.component.html',
   styleUrls: ['./post-item.component.scss']
 })
-export class PostItemComponent implements OnInit {
+export class PostItemComponent {
   @Input() post: Post;
 
   constructor() { }
-
-  ngOnInit(): void {
-    console.log('dfvdfv');
-    
-  }
 
 }

@@ -14,7 +14,18 @@ export class ContactUsComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {}
 
-  public initializeForm(): void {
+  public onSubmit(): void {
+    if (this.form.valid) {
+      // send data
+      this.form.reset();
+    }
+  }
+
+  ngOnInit(): void {
+    this.initializeForm();
+  }
+
+  private initializeForm(): void {
     this.form = this.fb.group({
       fullName: [
         null,
@@ -26,16 +37,5 @@ export class ContactUsComponent implements OnInit {
         [Validators.required, Validators.pattern('^[+]{0,1}380([0-9]{9})$')],
       ],
     });
-  }
-
-  public onSubmit(): void {
-    if (this.form.valid) {
-      // send data
-      this.form.reset();
-    }
-  }
-
-  ngOnInit(): void {
-    this.initializeForm();
   }
 }
